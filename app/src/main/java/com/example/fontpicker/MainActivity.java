@@ -1,4 +1,4 @@
-package com.example.colorpicker;
+package com.example.fontpicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,13 +22,15 @@ public class MainActivity extends AppCompatActivity {
         layout=findViewById(R.id.layout);
         initChangeButton();
 
+
+
     }
 
     public void onResume() {
         super.onResume();
-        SharedPreferences sp = getSharedPreferences("colorPref", Context.MODE_PRIVATE);
-        int color = sp.getInt("color",0);
-        layout.setBackgroundColor(color);
+        SharedPreferences sp = getSharedPreferences("fontPref", Context.MODE_PRIVATE);
+        int font = sp.getInt("font",0);
+        layout.setBackgroundColor(font);
     }
 
     private void initChangeButton(){
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         changeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ColorSettings.class);
+                Intent intent = new Intent(MainActivity.this, FontSettings.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }

@@ -1,4 +1,4 @@
-package com.example.colorpicker;
+package com.example.fontpicker;
 
 import org.junit.Test;
 

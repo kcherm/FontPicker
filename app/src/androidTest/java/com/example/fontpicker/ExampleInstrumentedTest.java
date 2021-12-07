@@ -1,4 +1,4 @@
-package com.example.colorpicker;
+package com.example.fontpicker;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.colorpicker", appContext.getPackageName());
+        assertEquals("com.example.fontpicker", appContext.getPackageName());
     }
 }
