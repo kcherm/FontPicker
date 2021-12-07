@@ -20,7 +20,7 @@ public class FontSettings extends AppCompatActivity {
 
     private void initSettings(){
         SharedPreferences sp = getSharedPreferences("fontPref", Context.MODE_PRIVATE);
-        String fontName = sp.getString("font", "serif");
+        int font = sp.getInt("font", 0);
 
     }
 
@@ -37,22 +37,22 @@ public class FontSettings extends AppCompatActivity {
                 if(rb1.isChecked()){
                     SharedPreferences sp = getSharedPreferences("fontPref", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();
-                    editor.putInt("font", 0xffd12a2a);
+                    editor.putInt("font", 0);
                     editor.apply();
                 }else if(rb2.isChecked()){
                     SharedPreferences sp = getSharedPreferences("fontPref", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();
-                    editor.putInt("font", 0xff00ff00);
+                    editor.putInt("font", 1);
                     editor.apply();
                 }else if(rb3.isChecked()){
                     SharedPreferences sp = getSharedPreferences("fontPref", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();
-                    editor.putInt("font", 0xff2a4ed1);
+                    editor.putInt("font", 2);
                     editor.apply();
                 }else{
                     SharedPreferences sp = getSharedPreferences("fontPref", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();
-                    editor.putInt("font", 0xff0be3e3);
+                    editor.putInt("font", 3);
                     editor.apply();
                 }
             }
